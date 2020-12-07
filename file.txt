@@ -1,0 +1,31 @@
+mysql> desc Track;
++--------------+---------------+------+-----+---------+----------------+
+| Field        | Type          | Null | Key | Default | Extra          |
++--------------+---------------+------+-----+---------+----------------+
+| TrackId      | int           | NO   | PRI | NULL    | auto_increment |
+| Name         | varchar(200)  | NO   |     | NULL    |                |
+| AlbumId      | int           | YES  | MUL | NULL    |                |
+| MediaTypeId  | int           | NO   | MUL | NULL    |                |
+| GenreId      | int           | YES  | MUL | NULL    |                |
+| Composer     | varchar(220)  | YES  |     | NULL    |                |
+| Milliseconds | int           | NO   |     | NULL    |                |
+| Bytes        | int           | YES  |     | NULL    |                |
+| UnitPrice    | decimal(10,2) | NO   |     | NULL    |                |
++--------------+---------------+------+-----+---------+----------------+
+9 rows in set (0.00 sec)
+
+mysql> source test.sql
++----------+
+| count(*) |
++----------+
+|     3503 |
++----------+
+1 row in set (0.01 sec)
+
++----------+
+| count(*) |
++----------+
+|      275 |
++----------+
+1 row in set (0.00 sec)
+
